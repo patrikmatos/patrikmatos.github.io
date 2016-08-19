@@ -1,0 +1,28 @@
+.container {
+  width: 800px;
+  color: #333;
+}
+
+#head {
+  margin-top: 300px;
+}
+
+#head h1 {
+  letter-spacing: -2px;
+  font-size: 60px;
+}
+
+#head h2 {
+  font-size: 40px;
+  margin-top: -15px;
+}
+
+#description {
+  margin-top: 50px;
+  font-size: 25px;
+}
+
+.container a {
+  color: #333;
+  font-weight: bold;
+}
