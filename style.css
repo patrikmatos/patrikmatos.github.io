@@ -1,28 +1,41 @@
+body {
+background-color: #fcfcfc;
+
+}
+
+
 .container {
-  width: 800px;
-  color: #333;
+  /*width: 1024px;*/
+    margin-left: 150px;
+  background-color: #fcfcfc;
+  font-family: 'Roboto', sans-serif;
+  color: #555;
 }
 
 #head {
-  margin-top: 300px;
+  margin-top: 150px;
+    
 }
 
 #head h1 {
-  letter-spacing: -2px;
-  font-size: 60px;
+  letter-spacing: 0px;
+  font-size: 50px;
+  font-weight: 500;
 }
 
 #head h2 {
-  font-size: 40px;
-  margin-top: -15px;
+  font-size: 50px;
+  margin-top: 0px;
+  font-weight: 100;
 }
 
 #description {
   margin-top: 50px;
   font-size: 25px;
+  font-weight: 100;
 }
 
-.container a {
-  color: #333;
-  font-weight: bold;
+.container a {   
+  color: #555;
+  font-weight: 500;
 }
