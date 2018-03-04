@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Page 2</title>
+	<meta name="author" content="" />
+	<meta name="description" content="" />
+	<meta name="keywords"  content="" />
+	<meta name="Resource-type" content="Document" />
+
+
+
+	<link rel="stylesheet" type="text/css" href="https://alvarotrigo.com/fullPage/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="patrik.css" />
+
+	<link rel="stylesheet" type="text/css"  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css"  href="https://alvarotrigo.com/fullPage/jquery.fullPage.css" />	
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+
+	<script src="https://alvarotrigo.com/fullPage/jquery.fullPage.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+			  anchors: ['00', '01', '02', '03', '04']
+			});
+		});
+	
+		function enableNav(){
+			$("#menu .menu-item").css({"display":""}).animate({ opacity: 1 },function(){
+				$(this).css({"display":"block"});
+			});
+			$("#menu").css({"background-color":"rgba(255, 255, 255, .9)"});
+		}
+
+		function closeNav(){
+			$("#menu .menu-item").animate({ opacity: 0 },function(){
+				$(this).css({"display":"none"});
+			});
+			$("#menu").css({"background-color":""});
+		}
+	</script>
+
+</head>
+<body>
+
+<div class="container">
+	<ul id="menu" >
+		<li>
+			<a href="page1.html" class="menu-item">
+				<div>00.</div>
+				<div class="note">Page1</div>
+			</a>
+		</li>
+		<li>
+			<a href="page2.html">
+				<div>01.</div>
+				<div class="note">Page2</div>
+			</a>
+		</li>
+		<li class="active">
+			<a href="#"  onclick="enableNav(); return false;" onmouseover="enableNav(); return false;" >
+				<div>03.</div>
+				<div class="note">Page3</div>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="menu-item" onclick="closeNav(); return false;">
+				<div>X</div>
+				<div class="note">Close</div>
+			</a>
+		</li>
+	</ul>
+</div>
+
+<div id="fullpage" style:>
+	<div class="section" id="section0">
+		<div class="container">    
+			<div class="page_title">
+				<div class="row">
+					<div class="col-lg-2"> </div>
+					<div class="col-lg-7">  
+						<h1>Page 3</h1>
+					</div>
+					<div class="col-lg-3"></div>
+				</div>
+			</div>
+		</div> 
+	</div>
+
+	<div class="section" id="section1">
+		<div class="container">
+			<div class="row bg_01b">
+				<div class="col-lg-2"></div>
+				<div class="col-lg-3 padding">
+					<h1>Area 1</h1>       
+				</div>
+				<div class="col-lg-7"></div>
+			</div>
+		</div>		
+	</div>
+</div>
+
+
+</body>
+</html>
