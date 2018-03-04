@@ -30,19 +30,40 @@
 	<script src="https://alvarotrigo.com/fullPage/jquery.fullPage.js"></script>
 
 	<script type="text/javascript">
+        var isMenuOpen = false;
+        var manualClickToclose = false;
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
 			  anchors: ['00', '01']
 			});
 		});
+        
+        $(document).mousemove(function(evt){
+                if(evt.clientX > 200) manualClickToclose = false;
+                if(evt.clientX > 200 && isMenuOpen){
+                    closeNav();
+                }else if(evt.clientX < 200 && !isMenuOpen && !manualClickToclose){
+                    enableNav();
+                }
+            
+        });
+        
 		function enableNav(){
+            if($("#menu .menu-item").css("opacity") === "1"){
+                closeNav();
+                manualClickToclose = true;
+                return;
+            }
+            isMenuOpen = true;
 			$("#menu .menu-item").css({"display":""}).animate({ opacity: 1 },function(){
 				$(this).css({"display":"block"});
+                
 			});
 			$("#menu").css({"background-color":"rgba(255, 255, 255, .9)"});
 		}
 
 		function closeNav(){
+            isMenuOpen = false;
 			$("#menu .menu-item").animate({ opacity: 0 },function(){
 				$(this).css({"display":"none"});
 			});
@@ -56,7 +77,7 @@
 <div class="container">
 	<ul id="menu" >
 		<li  class="active">
-			<a href="#" onclick="enableNav(); return false;" onmouseover="enableNav(); return false;" >
+			<a href="#" onclick="enableNav(); return false;" >
 				<div>00.</div>
 				<div class="note">Page1</div>
 			</a>
@@ -71,6 +92,12 @@
 			<a href="page3.html" class="menu-item">
 				<div>03.</div>
 				<div class="note">Page3</div>
+			</a>
+		</li>
+        <li>
+			<a href="page4.html" class="menu-item">
+				<div>04.</div>
+				<div class="note">Page4</div>
 			</a>
 		</li>
 		<li>

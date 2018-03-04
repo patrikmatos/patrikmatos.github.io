@@ -29,7 +29,7 @@
 
 	<script src="https://alvarotrigo.com/fullPage/jquery.fullPage.js"></script>
 
-	<script type="text/javascript">
+    <script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
 			  anchors: ['00', '01']
@@ -71,14 +71,14 @@
 				<div class="note">Page2</div>
 			</a>
 		</li>
-		<li class="active">
-			<a href="#"  onclick="enableNav(); return false;" onmouseover="enableNav(); return false;" >
+		<li>
+			<a href="page3.html" class="menu-item">
 				<div>03.</div>
 				<div class="note">Page3</div>
 			</a>
 		</li>
-        <li>
-			<a href="page4.html" class="menu-item">
+        <li class="active">
+			<a href="#" onclick="enableNav(); return false;" onmouseover="enableNav(); return false;" >
 				<div>04.</div>
 				<div class="note">Page4</div>
 			</a>
@@ -92,14 +92,15 @@
 	</ul>
 </div>
 
-<div id="fullpage" style:>
+
+<div id="fullpage">
 	<div class="section" id="section0">
 		<div class="container">    
 			<div class="page_title">
 				<div class="row">
 					<div class="col-lg-2"> </div>
 					<div class="col-lg-7">  
-						<h1>Page 3</h1>
+						<h1>Page 1 - Area 1</h1>
 					</div>
 					<div class="col-lg-3"></div>
 				</div>
@@ -108,16 +109,20 @@
 	</div>
 
 	<div class="section" id="section1">
-		<div class="container">
-			<div class="row bg_01b">
-				<div class="col-lg-2"></div>
-				<div class="col-lg-3 padding">
-					<h1>Area 1</h1>       
+		<div class="container">    
+			<div class="page_title">
+				<div class="row">
+					<div class="col-lg-2"> </div>
+					<div class="col-lg-7">  
+						<h1>Page 1 - Area 2</h1>
+					</div>
+					<div class="col-lg-3"></div>
 				</div>
-				<div class="col-lg-7"></div>
 			</div>
-		</div>		
+		</div> 
 	</div>
+	
+
 </div>
 
 

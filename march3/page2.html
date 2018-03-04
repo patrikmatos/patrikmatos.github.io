@@ -32,11 +32,14 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
-			  anchors: ['00', '01', '02', '03', '04']
+			  anchors: ['00', '01']
 			});
 		});
-	
 		function enableNav(){
+            if($("#menu .menu-item").css("opacity") === "1"){
+                closeNav();
+                return;
+            }
 			$("#menu .menu-item").css({"display":""}).animate({ opacity: 1 },function(){
 				$(this).css({"display":"block"});
 			});
@@ -72,6 +75,12 @@
 			<a href="page3.html" class="menu-item">
 				<div>03.</div>
 				<div class="note">Page3</div>
+			</a>
+		</li>
+        <li>
+			<a href="page4.html" class="menu-item">
+				<div>04.</div>
+				<div class="note">Page4</div>
 			</a>
 		</li>
 		<li>
